@@ -3,29 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Allervie Analytics Dashboard</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Allervie Analytics</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>Allervie Analytics Dashboard</h1>
-        </header>
-        
-        <main>
-            <section class="metrics-section">
-                <h2>Active Users</h2>
-                <div id="active-users-chart" class="chart"></div>
-            </section>
-            
-            <section class="metrics-section">
-                <h2>Traffic Sources</h2>
-                <div id="traffic-sources-chart" class="chart"></div>
-            </section>
-        </main>
+        <h1>Allervie Analytics Dashboard</h1>
+        <div id="auth-status"></div>
+        <div id="analytics-content"></div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+    <script src="{{ url_for('static', filename='auth.js') }}"></script>
+    <script src="{{ url_for('static', filename='analytics.js') }}"></script>
 </body>
 </html>
